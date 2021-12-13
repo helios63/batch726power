@@ -1,4 +1,4 @@
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, {createGlobalStyle, css} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -16,4 +16,29 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+`
+export const Marginals = css`
+  box-sizing: border-box;
+  display: flex;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  align-items: center;
+  z-index: 1;
+`
+
+export const ImageContainer = styled.div`
+  width: 800px;
+  height: 533px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+`
+export const Wrapper = styled.section`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 `
