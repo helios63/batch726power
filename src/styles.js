@@ -29,11 +29,10 @@ export const Marginals = css`
 
 export const ImageContainer = styled.div`
   width: 800px;
-  height: 533px;
+  height: 500px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-
 `
 export const Wrapper = styled.section`
   display:flex;
