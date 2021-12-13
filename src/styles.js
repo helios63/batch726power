@@ -1,6 +1,10 @@
 import styled, {createGlobalStyle, css} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+@keyframes glow {
+  0% { box-shadow: rgb(255,255,255) 0 0 0px; }
+  100% { box-shadow: rgb(255,255,255) 0 10px 100px; }
+}
   body {
     background-color: #fd1015;
     color: #FBFBFB;
@@ -8,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size:18px;
     font-weight:500;
     line-height:1.2;
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -27,7 +31,11 @@ export const Marginals = css`
   z-index: 1;
 `
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div.attrs(({$isTogether}) => ({
+  style: {
+    animation: $isTogether ? 'glow 3s infinite alternate' : 'none'
+  }
+}))`
   width: 800px;
   height: 500px;
   position: relative;
