@@ -33,8 +33,6 @@ const App = () => {
     calculateDistance([touches[0].clientX, touches[0].clientY])
   }
 
-  console.log(distance)
-
   return (
     <>
       <GlobalStyle />
@@ -43,7 +41,7 @@ const App = () => {
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
         <ImageContainer>
           {matrix.map(([x,y], index) => (
-            <ImgBox key={index} x={x} y={y} />
+            <ImgBox key={index} x={x} y={y} percent={distance}/>
           ))}
         </ImageContainer>
       </Wrapper>
