@@ -1,4 +1,4 @@
-import { Form } from "./styles";
+import * as Yup from 'yup'
 
 const FormComponent = ({handleSuccess}) => {
   return <form onSubmit={handleSuccess}>
