@@ -39,4 +39,28 @@ export const Close = styled.button`
   right: 60px;
   top: 60px;
 
+  &::before,
+  &::after {
+    background: #fd1015;
+    content: '';
+    position:absolute;
+    height: 33px;
+    width: 2px;
+    left: 15px;
+    top: 0;
+  }
+
+  &::before {
+    transform: rotate(45deg)
+  }
+
+  &::after {
+    transform: rotate(-45deg)
+  }
+
+  @media (max-width: 700px) {
+    right: 30px;
+    top: 30px;
+  }
+
 `

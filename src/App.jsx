@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import ImgBox from "./components/imgBox";
 import Modal from "./components/Modal";
+import ModalInner from "./components/ModalInner";
 import React, { useState } from "react";
 
 const matrix = [
@@ -42,7 +43,10 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      { showModal && <Modal toggleModal={toggleModal} /> }
+      { showModal &&
+      <Modal toggleModal={toggleModal}>
+        <ModalInner />
+      </Modal> }
       <Header />
       <Footer />
       <Wrapper
