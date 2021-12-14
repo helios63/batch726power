@@ -3,7 +3,7 @@ import {Logo, Header} from "./styles"
 
 const HeaderComponent = () => (
   <Header>
-    <Logo title="Batch 726 Power Logo"/>
+    <Logo title="Logo Github"/>
   </Header>
 )
 
